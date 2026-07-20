@@ -1,0 +1,14 @@
+Mobile:
+
+
+cd ebpco-mobile
+flutter pub get
+flutter devices
+
+flutter run
+
+Web
+cd E-BPCO-Software-main    
+dir
+npm install
+ng serve
