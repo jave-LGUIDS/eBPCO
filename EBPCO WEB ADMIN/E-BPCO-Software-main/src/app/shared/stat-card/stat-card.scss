@@ -1,0 +1,113 @@
+@use '../styles/tokens' as *;
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.stat-card {
+  height: 100%;
+  border-radius: $radius-lg;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  animation: card-in 0.35s ease both;
+  transition:
+    transform $ease-base,
+    box-shadow $ease-base;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.tint-blue {
+  background: linear-gradient(160deg, #eaf1ff, #f6f9ff);
+}
+.tint-purple {
+  background: linear-gradient(160deg, #f1ecff, #f8f6ff);
+}
+.tint-green {
+  background: linear-gradient(160deg, #e8faf1, #f5fdf9);
+}
+.tint-red {
+  background: linear-gradient(160deg, #fdecec, #fdf6f6);
+}
+.tint-neutral {
+  background: linear-gradient(160deg, #f4f4f7, #fafafc);
+}
+
+.stat-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.label {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $color-ink-600;
+  line-height: 1.25;
+}
+
+.value {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: $color-ink-900;
+}
+
+.icon-badge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-surface;
+  box-shadow: $shadow-badge;
+}
+
+.deltas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  &.good {
+    color: $color-success-strong;
+  }
+
+  &.bad {
+    color: $color-danger;
+  }
+}
+
+.footnote {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $color-ink-300;
+}

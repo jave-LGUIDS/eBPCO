@@ -1,0 +1,76 @@
+@use 'tokens' as *;
+
+@keyframes ring-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ring-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ring-card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-height: 5.5rem;
+  animation: ring-card-in 0.4s ease both;
+  transition:
+    transform $ease-base,
+    box-shadow $ease-base,
+    border-color $ease-base;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card-hover;
+    border-color: $color-border-strong;
+  }
+}
+
+.ring-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.ring-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $color-ink-300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ring-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $color-ink-900;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1400px) {
+  .ring-stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ring-stat-row {
+    grid-template-columns: 1fr;
+  }
+}

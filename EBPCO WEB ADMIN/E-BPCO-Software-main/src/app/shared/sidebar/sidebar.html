@@ -1,0 +1,26 @@
+<aside class="sidebar">
+  <div class="brand">
+    <app-dilg-seal [size]="36" />
+    <span>E-BPCO</span>
+  </div>
+
+  <nav class="nav-list">
+    @for (item of navItems(); track item.path) {
+      <a
+        class="nav-item"
+        [routerLink]="item.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
+        [title]="item.label"
+      >
+        <app-icon [name]="item.icon" [size]="19" />
+        <span>{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <button type="button" class="logout-btn" (click)="logout()" title="Log Out">
+    <app-icon name="logout" [size]="17" />
+    <span>Log Out</span>
+  </button>
+</aside>
