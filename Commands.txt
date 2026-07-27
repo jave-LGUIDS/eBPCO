@@ -12,3 +12,12 @@ cd E-BPCO-Software-main
 dir
 npm install
 ng serve
+
+Pushing 
+git checkout -b *branch-name*
+git switch -c *branch-name*
+git branch
+git add .
+git commit -m "Your commit message"
+git push -u origin *branch-name*
+git push
