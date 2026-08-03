@@ -23,20 +23,15 @@ git push -u origin *branch-name*
 git push
 
 
-Building Permit (Demolition)	(On Going) 
+Building Permit (Demolition)	
 Architectural Permit	
 Civil / Structural Permit	
 Electrical Permit	
 Mechanical Permit	
-Sanitary Permit	
+Sanitary Permit	 
 Plumbing Permit	
 Electronics Permit	
+Interior Permit (On Going)
 Fencing Permit	
 Sign Permit	Sign Permit 
-Excavation Permit	
-Certificate of Occupancy	
-Repair Permit	
-Scaffolding Permit	 
-Sidewalk Construction Permit	 
-Change of Use / Occupancy	 
-Affidavit of Setback	 
+Excavation Perm 
